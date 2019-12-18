@@ -16,37 +16,11 @@ new_img = Image.new("RGB", (width, height), "white")
 
 # TODO: Replace this with your own filter!
 # Median pixel filter, taken from https://note.nkmk.me/en/python-opencv-pillow-image-size
-for i in range(1, width-1):
-    for j in range(1, height-1):
 
-        Fx = 0
-        Fy = 0
-
-        a = img.getpixel((i-1, j-1))
-        r = a[0]
-        g = a[1]
-        b = a[2]
-
-        intensity = r + g + b
-
-        Fx += -intensity
-        Fy += -intensity
-
-        a = img.getpixel((i-1, j))
-        r = a[0]
-        g = a[1]
-        b = a[2]
-
-        Fx += -2 * (r + g + b)
-
-        a = img.getpixel((i-1, j+1))
-        r = a[0]
-        g = a[1]
-        b = a[2]
-
-        Fx += -(r + g + b)
-        Fy += -(r + g + b)
-
+for i in range(1, width - 1):
+    for j in range(1, height):
+        r, g, b = img.getpixel((i, j))
+        new_img.putpixel((i, j), (20, 26, b))
 
 
 for i in range(width // 2, width):
