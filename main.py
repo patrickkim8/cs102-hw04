@@ -52,7 +52,7 @@ for i in range(1, width-1):
 for i in range(width // 2, width):
     for j in range(1, height):
         r, g, b = img.getpixel((i, j))
-        new_img.putpixel((i, j), (0, 155, b))
+        new_img.putpixel((i, j), (20, 155, b))
         #find a function that gives you a number from 0 to 255
         #rand something input to r, g, b
 
