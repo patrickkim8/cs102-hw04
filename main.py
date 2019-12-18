@@ -20,7 +20,7 @@ new_img = Image.new("RGB", (width, height), "white")
 for i in range(1, width - 1):
     for j in range(1, height):
         r, g, b = img.getpixel((i, j))
-        new_img.putpixel((i, j), (20, 26, b))
+        new_img.putpixel((i, j), (r, 26, b))
 
 
 for i in range(width // 2, width):
