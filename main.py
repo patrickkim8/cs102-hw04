@@ -13,6 +13,7 @@ width, height = img.size
 img = img.rotate(45, expand=1)
 
 new_img = Image.new("RGB", (width, height), "white")
+
 for i in range(width // 2, width):
     for j in range(1, height):
         new_img.rotate(180)
